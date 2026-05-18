@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GoDash | Modern Ecommerce Store</title>
+
+    <meta name="description"
+        content="GoDash modern ecommerce platform with smart delivery scheduling and live order tracking.">
+
+    <meta name="keywords"
+        content="GoDash, ecommerce, electronics, clothing, watches, perfumes, automotive">
+
+    <meta name="author" content="GoDash Team">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            <h1>GoDash</h1>
+        </div>
+
+        <nav class="navbar">
+
+            <a href="index.html">Home</a>
+
+            <div class="dropdown">
+
+                <button class="dropbtn">
+                    Products
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="products.html?category=smartphones">Electronics</a>
+                    <a href="products.html?category=mens-shirts">Clothing</a>
+                    <a href="products.html?category=womens-watches">Watches</a>
+                    <a href="products.html?category=fragrances">Perfumes</a>
+                    <a href="products.html?category=automotive">Automotive</a>
+                    <a href="products.html?category=groceries">Pet Supplies</a>
+                    <a href="products.html?category=sports-accessories">Sports</a>
+
+                </div>
+
+            </div>
+
+            <a href="best-sellers.html">Best Sellers</a>
+            <a href="trending.html">Trending Deals</a>
+            <a href="refund.html">Claim Refund</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+
+            <a href="cart.html" class="cart-link">
+                Cart (<span id="cart-count">0</span>)
+            </a>
+
+        </nav>
+
+        <button id="dark-mode-toggle">
+            Dark Mode
+        </button>
+
+    </header>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>Fast Shopping with Smart Delivery Scheduling</h2>
+
+            <p>
+                Shop trending products and select your preferred delivery time instantly.
+            </p>
+
+            <a href="products.html" class="shop-btn">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH BAR -->
+
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search products..."
+            aria-label="Search Products">
+
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+
+    <section class="products-section">
+
+        <div class="section-header">
+
+            <h2>Featured Products</h2>
+
+        </div>
+
+        <div id="products-container" class="products-grid">
+
+            <!-- Products Loaded Dynamically -->
+
+        </div>
+
+    </section>
+
+    <!-- BEST SELLERS -->
+
+    <section class="best-sellers">
+
+        <div class="section-header">
+            <h2>Best Sellers</h2>
+        </div>
+
+        <div class="best-grid">
+
+            <div class="best-card">
+                <h3>Smart Watches</h3>
+            </div>
+
+            <div class="best-card">
+                <h3>Wireless Earbuds</h3>
+            </div>
+
+            <div class="best-card">
+                <h3>Luxury Perfumes</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TRENDING DEALS -->
+
+    <section class="trending">
+
+        <div class="section-header">
+            <h2>Trending Deals</h2>
+        </div>
+
+        <div class="deal-banner">
+
+            <h3>Up to 50% Off Electronics</h3>
+
+        </div>
+
+    </section>
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+
+        <h2>Subscribe for Updates</h2>
+
+        <form id="newsletter-form">
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required>
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>GoDash</h3>
+
+                <p>
+                    Modern ecommerce platform with smart delivery features.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="refund.html">Refund</a>
+                <a href="faq.html">FAQ</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/darkmode.js"></script>
+
+</body>
+
+</html>
