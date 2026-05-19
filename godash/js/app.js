@@ -1,3 +1,8 @@
+// This file contains the JavaScript code for handling the shopping cart functionality on the GoDash frontend. 
+// It includes functions to add products to the cart, update the cart count, 
+// and store the cart data in localStorage. 
+// The cart data is persisted across page reloads, allowing users to maintain 
+// their shopping cart state as they navigate the site.
 function addToCart(productId) {
 
     let cart =
