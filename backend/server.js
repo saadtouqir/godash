@@ -6,6 +6,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 // Load environment variables
 dotenv.config();
@@ -14,6 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+app.use(cors()); // Allow all origins for development
 app.use(express.json());
 
 // Routes
@@ -26,6 +28,11 @@ app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/feedback', feedbackRoutes);
 app.use('/api/recommendations', recommendationRoutes);
+
+// Diagnostic Test Route
+app.get('/api/test', (req, res) => {
+    res.json({ message: "Backend is reachable and CORS is working!" });
+});
 
 // MongoDB Connection
 const MONGO_URI = process.env.MONGO_URI;

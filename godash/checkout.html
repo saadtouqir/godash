@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | GoDash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/checkout.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+    <style>
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 50px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .checkout-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .order-summary-box {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .dark-mode .order-summary-box {
+            background: #1f2937;
+        }
+
+        .summary-title {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .item-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .total-row {
+            border-top: 2px solid #2563eb;
+            margin-top: 20px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;"><h1>GoDash</h1></a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Products</button>
+                <div class="dropdown-content">
+                    <a href="products.html?category=smartphones">Electronics</a>
+                    <a href="products.html?category=mens-shirts">Clothing</a>
+                    <a href="products.html?category=womens-watches">Watches</a>
+                    <a href="products.html?category=fragrances">Perfumes</a>
+                    <a href="products.html?category=automotive">Automotive</a>
+                    <a href="products.html?category=groceries">Pet Supplies</a>
+                    <a href="products.html?category=sports-accessories">Sports</a>
+                </div>
+            </div>
+            <a href="best-sellers.html">Best Sellers</a>
+            <a href="trending.html">Trending Deals</a>
+            <a href="refund.html">Claim Refund</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a id="auth-nav-link" href="auth.html">Login</a>
+            <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+
+    <main>
+        <div class="checkout-grid">
+            
+            <!-- CHECKOUT FORM -->
+            <section class="checkout-form-section">
+                <h2>Shipping & Payment</h2>
+                <p style="margin-bottom: 30px; color: #666;">Please enter your details to finalize your order.</p>
+
+                <form id="checkout-form">
+                    <h3>Shipping Information</h3>
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Full Address</label>
+                        <input type="text" id="address" required placeholder="123 Sydney St, NSW 2000">
+                    </div>
+
+                    <h3 style="margin-top: 30px;">Payment Information</h3>
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" required placeholder="1234 5678 9101 1121" maxlength="19">
+                    </div>
+                    <div style="display: flex; gap: 20px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" required placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" required placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Continue to Delivery Scheduling</button>
+                </form>
+                <div id="checkout-message" class="hidden"></div>
+            </section>
+
+            <!-- ORDER SUMMARY -->
+            <section class="order-summary-box">
+                <h3 class="summary-title">Your Order</h3>
+                <div id="summary-items-list">
+                    <!-- Items will be loaded dynamically -->
+                </div>
+                <div class="total-row">
+                    <span>Total Amount</span>
+                    <span id="summary-total">$0.00</span>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>GoDash</h3>
+                <p>Modern ecommerce platform with smart delivery features.</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="refund.html">Refund</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

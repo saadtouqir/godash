@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | GoDash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;"><h1>GoDash</h1></a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Products</button>
+                <div class="dropdown-content">
+                    <a href="products.html?category=smartphones">Electronics</a>
+                    <a href="products.html?category=mens-shirts">Clothing</a>
+                    <a href="products.html?category=womens-watches">Watches</a>
+                    <a href="products.html?category=fragrances">Perfumes</a>
+                    <a href="products.html?category=automotive">Automotive</a>
+                    <a href="products.html?category=groceries">Pet Supplies</a>
+                    <a href="products.html?category=sports-accessories">Sports</a>
+                </div>
+            </div>
+            <a href="best-sellers.html">Best Sellers</a>
+            <a href="trending.html">Trending Deals</a>
+            <a href="refund.html">Claim Refund</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a id="auth-nav-link" href="auth.html">Login</a>
+
+            <a href="cart.html" class="cart-link active">
+                Cart (<span id="cart-count">0</span>)
+            </a>
+        </nav>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+
+    <main class="cart-container">
+        <h2>Your Shopping Cart</h2>
+
+        <div class="cart-content">
+            <!-- CART ITEMS -->
+            <div id="cart-items" class="cart-items-list">
+                <!-- Items will be loaded dynamically -->
+                <p>Loading your cart...</p>
+            </div>
+
+            <!-- CART SUMMARY -->
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Delivery Fee</span>
+                    <span>Calculated at next step</span>
+                </div>
+                <hr>
+                <div class="summary-item total">
+                    <span>Total</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn" disabled>Proceed to Checkout</button>
+                <a href="products.html" class="continue-shopping">Continue Shopping</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>GoDash</h3>
+                <p>Modern ecommerce platform with smart delivery features.</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="refund.html">Refund</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -17,13 +17,36 @@ function addToCart(productId) {
     alert("Item added to cart");
 }
 
-function updateCartCount() {
+function updateAuthLink() {
+    const authLink = document.getElementById('auth-nav-link');
+    const user = JSON.parse(localStorage.getItem('user'));
 
+    if (authLink) {
+        if (user) {
+            authLink.textContent = `Logout (${user.username})`;
+            authLink.href = "#";
+            authLink.onclick = () => {
+                localStorage.removeItem('token');
+                localStorage.removeItem('user');
+                window.location.reload();
+            };
+        } else {
+            authLink.textContent = "Login";
+            authLink.href = "auth.html";
+            authLink.onclick = null;
+        }
+    }
+}
+
+function updateCartCount() {
     let cart =
         JSON.parse(localStorage.getItem("cart")) || [];
 
-    document.getElementById("cart-count")
-        .textContent = cart.length;
+    const cartCount = document.getElementById("cart-count");
+    if (cartCount) {
+        cartCount.textContent = cart.length;
+    }
 }
 
 updateCartCount();
+updateAuthLink();
