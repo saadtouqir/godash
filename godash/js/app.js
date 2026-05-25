@@ -50,3 +50,26 @@ function updateCartCount() {
 
 updateCartCount();
 updateAuthLink();
+
+// NEWSLETTER LOGIC
+document.addEventListener('DOMContentLoaded', () => {
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterMessage = document.getElementById('newsletter-message');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+
+            // Simulated response
+            newsletterMessage.style.color = "#10b981"; // Success green
+            newsletterMessage.textContent = `✅ Success! ${email} has been subscribed.`;
+            
+            newsletterForm.reset();
+            
+            setTimeout(() => {
+                newsletterMessage.textContent = "";
+            }, 5000);
+        });
+    }
+});

@@ -1,0 +1,211 @@
+/* ABOUT HERO */
+.about-hero {
+    background: linear-gradient(rgba(37, 99, 235, 0.8), rgba(29, 78, 216, 0.8)), 
+                url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ABOUT CONTENT */
+.about-section {
+    padding: 80px 5%;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* GOALS SECTION */
+.goals-section {
+    background: #f8fafc;
+    padding: 80px 5%;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.goal-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.goal-card:hover {
+    transform: translateY(-10px);
+}
+
+.goal-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.goal-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.goal-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* TEAM SECTION */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.team-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.team-member-placeholder {
+    width: 100px;
+    height: 100px;
+    background: #e5e7eb;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #6b7280;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    background: #f8fafc;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.contact-icon {
+    font-size: 30px;
+}
+
+.contact-item h4 {
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.contact-item p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.contact-form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* DARK MODE OVERRIDES (Injected into about.css for page-specific control) */
+.dark-mode .about-text h2,
+.dark-mode .goal-card h3,
+.dark-mode .team-card h3,
+.dark-mode .contact-item h4 {
+    color: white;
+}
+
+.dark-mode .about-text p,
+.dark-mode .goal-card p,
+.dark-mode .contact-item p {
+    color: #9ca3af;
+}
+
+.dark-mode .goal-card,
+.dark-mode .team-card,
+.dark-mode .contact-item,
+.dark-mode .contact-form-box {
+    background: #1f2937;
+}
+
+.dark-mode .goals-section,
+.dark-mode .contact-section {
+    background: #111827;
+}
+
+.dark-mode .team-member-placeholder {
+    background: #374151;
+    color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-hero h1 {
+        font-size: 36px;
+    }
+}

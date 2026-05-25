@@ -150,22 +150,3 @@
         position: static;
     }
 }
-
-.dark-mode .cart-items-list,
-.dark-mode .cart-summary {
-    background: #1f2937;
-    color: white;
-}
-
-.dark-mode .cart-item {
-    border-color: #374151;
-}
-
-.dark-mode .summary-item.total {
-    color: white;
-}
-
-.dark-mode .qty-btn {
-    background: #374151;
-    color: white;
-}

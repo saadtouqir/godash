@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart | GoDash</title>
+    <title>Track Your Order | GoDash</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/darkmode.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/tracking.css">
     <script src="js/app.js" defer></script>
-    <script src="js/cart.js" defer></script>
+    <script src="js/tracking.js" defer></script>
     <script src="js/darkmode.js" defer></script>
 </head>
 
@@ -41,43 +41,52 @@
             <a href="about.html">About Us</a>
             <a href="about.html#contact">Contact Us</a>
             <a id="auth-nav-link" href="auth.html">Login</a>
-
-            <a href="cart.html" class="cart-link active">
-                Cart (<span id="cart-count">0</span>)
-            </a>
+            <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
         </nav>
         <button id="dark-mode-toggle">Dark Mode</button>
     </header>
 
-    <main class="cart-container">
-        <h2>Your Shopping Cart</h2>
+    <main class="tracking-container">
+        <div class="tracking-card">
+            <h2>Order Tracking</h2>
+            <p class="order-id">Order ID: #GD-<span id="display-order-id">Loading...</span></p>
 
-        <div class="cart-content">
-            <!-- CART ITEMS -->
-            <div id="cart-items" class="cart-items-list">
-                <!-- Items will be loaded dynamically -->
-                <p>Loading your cart...</p>
+            <div class="timer-section">
+                <h3>Estimated Delivery in:</h3>
+                <div id="countdown-timer" class="timer">02:59:59</div>
             </div>
 
-            <!-- CART SUMMARY -->
-            <div class="cart-summary">
-                <h3>Order Summary</h3>
-                <div class="summary-item">
-                    <span>Subtotal</span>
-                    <span id="cart-subtotal">$0.00</span>
+            <!-- PROGRESS TRACKER -->
+            <div class="progress-stepper">
+                <div class="step active" id="step-1">
+                    <div class="circle">1</div>
+                    <span>Order Received</span>
                 </div>
-                <div class="summary-item">
-                    <span>Delivery Fee</span>
-                    <span>Calculated at next step</span>
+                <div class="line"></div>
+                <div class="step" id="step-2">
+                    <div class="circle">2</div>
+                    <span>Packed</span>
                 </div>
-                <hr>
-                <div class="summary-item total">
-                    <span>Total</span>
-                    <span id="cart-total">$0.00</span>
+                <div class="line"></div>
+                <div class="step" id="step-3">
+                    <div class="circle">3</div>
+                    <span>Out for Delivery</span>
                 </div>
-                <button id="checkout-btn" class="checkout-btn" disabled>Proceed to Checkout</button>
-                <a href="products.html" class="continue-shopping">Continue Shopping</a>
+                <div class="line"></div>
+                <div class="step" id="step-4">
+                    <div class="circle">4</div>
+                    <span>Delivered</span>
+                </div>
             </div>
+
+            <div class="order-details-box">
+                <h3>Delivery Details</h3>
+                <p><strong>Scheduled Date:</strong> <span id="track-date">Loading...</span></p>
+                <p><strong>Time Slot:</strong> <span id="track-time">Loading...</span></p>
+                <p><strong>Service Type:</strong> <span id="track-type">Loading...</span></p>
+            </div>
+
+            <button onclick="window.location.href='index.html'" class="shop-btn" style="margin-top: 30px;">Back to Home</button>
         </div>
     </main>
 

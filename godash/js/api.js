@@ -34,8 +34,13 @@ async function fetchProducts() {
         allProducts = data.products;
 
         // On homepage, we only show 8. On products page, we show all.
-        const isHomePage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
+        const isHomePage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/" || window.location.pathname.includes("index");
         displayProducts(allProducts, isHomePage ? 8 : allProducts.length);
+
+        if (isHomePage) {
+            renderBestSellers(allProducts);
+            renderTrendingDeal(allProducts);
+        }
 
     } catch (error) {
         console.error("Error fetching products:", error);
@@ -93,6 +98,55 @@ if (searchInput) {
         );
         displayProducts(filteredProducts);
     });
+}
+
+function renderBestSellers(products) {
+    const container = document.getElementById("best-sellers-container");
+    if (!container) return;
+
+    // Sort by rating and take top 4
+    const sorted = [...products].sort((a, b) => b.rating - a.rating).slice(0, 4);
+    
+    container.innerHTML = "";
+    sorted.forEach(product => {
+        const card = document.createElement("div");
+        card.classList.add("product-card");
+        card.innerHTML = `
+            <a href="product.html?id=${product.id}" style="text-decoration: none; color: inherit;">
+                <img src="${product.thumbnail}" alt="${product.title}" loading="lazy">
+            </a>
+            <div class="product-info">
+                <a href="product.html?id=${product.id}" style="text-decoration: none; color: inherit;">
+                    <h3>${product.title}</h3>
+                </a>
+                <p>⭐ ${product.rating}</p>
+                <p>$${product.price}</p>
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+function renderTrendingDeal(products) {
+    const container = document.getElementById("trending-container");
+    if (!container) return;
+
+    // Find product with highest discount
+    const bestDeal = [...products].sort((a, b) => b.discountPercentage - a.discountPercentage)[0];
+
+    if (bestDeal) {
+        container.innerHTML = `
+            <div class="deal-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${bestDeal.thumbnail}'); background-size: cover; background-position: center; cursor: pointer;" onclick="window.location.href='product.html?id=${bestDeal.id}'">
+                <div style="padding: 60px;">
+                    <span style="background: #ef4444; color: white; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 14px;">HOT DEAL</span>
+                    <h3 style="font-size: 36px; margin: 15px 0;">Save ${Math.round(bestDeal.discountPercentage)}% on ${bestDeal.title}</h3>
+                    <p style="font-size: 20px; margin-bottom: 25px;">Limited time offer for our NSW customers.</p>
+                    <button class="shop-btn" style="border: none;">Grab it Now</button>
+                </div>
+            </div>
+        `;
+    }
 }
 
 async function fetchRecentlyViewed() {

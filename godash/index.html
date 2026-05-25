@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/darkmode.css">
     <script src="js/app.js" defer></script>
     <script src="js/api.js" defer></script>
     <script src="js/darkmode.js" defer></script>
@@ -30,7 +31,7 @@
     <header class="header">
 
         <div class="logo">
-            <h1>GoDash</h1>
+            <a href="index.html" style="text-decoration: none;"><h1>GoDash</h1></a>
         </div>
 
         <nav class="navbar">
@@ -61,7 +62,7 @@
             <a href="trending.html">Trending Deals</a>
             <a href="refund.html">Claim Refund</a>
             <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="about.html#contact">Contact Us</a>
             <a id="auth-nav-link" href="auth.html">Login</a>
 
             <a href="cart.html" class="cart-link">
@@ -134,36 +135,25 @@
             <h2>Best Sellers</h2>
         </div>
 
-        <div class="best-grid">
-
-            <div class="best-card">
-                <h3>Smart Watches</h3>
-            </div>
-
-            <div class="best-card">
-                <h3>Wireless Earbuds</h3>
-            </div>
-
-            <div class="best-card">
-                <h3>Luxury Perfumes</h3>
-            </div>
-
+        <div id="best-sellers-container" class="products-grid">
+            <!-- Best Sellers Loaded Dynamically -->
         </div>
 
     </section>
 
-    <!-- TRENDING DEALS -->
+    <!-- TRENDING DEAL -->
 
     <section class="trending">
 
         <div class="section-header">
-            <h2>Trending Deals</h2>
+            <h2>Special Deal</h2>
         </div>
 
-        <div class="deal-banner">
-
-            <h3>Up to 50% Off Electronics</h3>
-
+        <div id="trending-container">
+            <!-- Trending Deal Loaded Dynamically -->
+            <div class="deal-banner">
+                <h3>Check our latest offers!</h3>
+            </div>
         </div>
 
     </section>
@@ -192,6 +182,7 @@
 
             <input
                 type="email"
+                id="newsletter-email"
                 placeholder="Enter your email"
                 required>
 
@@ -200,6 +191,7 @@
             </button>
 
         </form>
+        <div id="newsletter-message" style="margin-top: 15px; font-weight: bold;"></div>
 
     </section>
 
@@ -222,7 +214,7 @@
             <div class="footer-links">
 
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="about.html#contact">Contact</a>
                 <a href="refund.html">Refund</a>
                 <a href="feedback.html">Feedback</a>
                 <a href="faq.html">FAQ</a>

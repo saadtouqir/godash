@@ -1,0 +1,152 @@
+.delivery-container {
+    padding: 50px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.delivery-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.delivery-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.delivery-card h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #111;
+}
+
+/* TIME SLOTS */
+.time-slots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.slot-btn {
+    padding: 15px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.slot-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.slot-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* DELIVERY TYPES */
+.delivery-types {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.type-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.type-option:has(input:checked) {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.type-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.type-name {
+    font-weight: bold;
+    color: #111;
+}
+
+.type-desc {
+    font-size: 13px;
+    color: #666;
+}
+
+.type-price {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* SUMMARY */
+.order-summary-box {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #4b5563;
+}
+
+.total-row {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #f3f4f6;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+    color: #111;
+}
+
+.selection-preview {
+    margin-top: 30px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.selection-preview p {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 992px) {
+    .delivery-grid {
+        grid-template-columns: 1fr;
+    }
+    .order-summary-box {
+        position: static;
+    }
+}

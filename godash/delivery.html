@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Delivery | GoDash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/delivery.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/delivery.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;"><h1>GoDash</h1></a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Products</button>
+                <div class="dropdown-content">
+                    <a href="products.html?category=smartphones">Electronics</a>
+                    <a href="products.html?category=mens-shirts">Clothing</a>
+                    <a href="products.html?category=womens-watches">Watches</a>
+                    <a href="products.html?category=fragrances">Perfumes</a>
+                    <a href="products.html?category=automotive">Automotive</a>
+                    <a href="products.html?category=groceries">Pet Supplies</a>
+                    <a href="products.html?category=sports-accessories">Sports</a>
+                </div>
+            </div>
+            <a href="best-sellers.html">Best Sellers</a>
+            <a href="trending.html">Trending Deals</a>
+            <a href="refund.html">Claim Refund</a>
+            <a href="about.html">About Us</a>
+            <a href="about.html#contact">Contact Us</a>
+            <a id="auth-nav-link" href="auth.html">Login</a>
+            <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+
+    <main class="delivery-container">
+        <div class="delivery-grid">
+            
+            <!-- SCHEDULING SECTION -->
+            <section class="scheduling-section">
+                <h2>Select Your Delivery Time</h2>
+                <p class="subtitle">Personalize your delivery for a seamless experience in NSW.</p>
+
+                <div class="delivery-card">
+                    <h3>1. Choose Delivery Date</h3>
+                    <div class="form-group">
+                        <input type="date" id="delivery-date" required>
+                    </div>
+                </div>
+
+                <div class="delivery-card">
+                    <h3>2. Select Time Slot</h3>
+                    <div class="time-slots" id="time-slots-container">
+                        <button class="slot-btn" data-time="9 AM - 12 PM">9 AM - 12 PM</button>
+                        <button class="slot-btn" data-time="12 PM - 3 PM">12 PM - 3 PM</button>
+                        <button class="slot-btn" data-time="3 PM - 6 PM">3 PM - 6 PM</button>
+                        <button class="slot-btn" data-time="6 PM - 9 PM">6 PM - 9 PM</button>
+                    </div>
+                </div>
+
+                <div class="delivery-card">
+                    <h3>3. Delivery Type</h3>
+                    <div class="delivery-types">
+                        <label class="type-option">
+                            <input type="radio" name="delivery-type" value="standard" checked data-cost="5">
+                            <div class="type-content">
+                                <span class="type-name">Standard Delivery</span>
+                                <span class="type-desc">3-5 Business Days</span>
+                                <span class="type-price">$5.00</span>
+                            </div>
+                        </label>
+                        <label class="type-option">
+                            <input type="radio" name="delivery-type" value="express" data-cost="15">
+                            <div class="type-content">
+                                <span class="type-name">Express Delivery</span>
+                                <span class="type-desc">Next Day Delivery</span>
+                                <span class="type-price">$15.00</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <button id="confirm-delivery-btn" class="submit-btn" disabled>Confirm & Place Order</button>
+            </section>
+
+            <!-- LIVE ORDER SUMMARY -->
+            <section class="order-summary-box">
+                <h3 class="summary-title">Final Summary</h3>
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span>Items Subtotal</span>
+                        <span id="summary-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Delivery Fee</span>
+                        <span id="summary-delivery-fee">$5.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Grand Total</span>
+                        <span id="summary-grand-total">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="selection-preview">
+                    <p><strong>Scheduled for:</strong> <span id="preview-date">Not selected</span></p>
+                    <p><strong>Time Slot:</strong> <span id="preview-time">Not selected</span></p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>GoDash</h3>
+                <p>Modern ecommerce platform with smart delivery features.</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="refund.html">Refund</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

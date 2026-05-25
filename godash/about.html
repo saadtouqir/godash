@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | GoDash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/about.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;"><h1>GoDash</h1></a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Products</button>
+                <div class="dropdown-content">
+                    <a href="products.html?category=smartphones">Electronics</a>
+                    <a href="products.html?category=mens-shirts">Clothing</a>
+                    <a href="products.html?category=womens-watches">Watches</a>
+                    <a href="products.html?category=fragrances">Perfumes</a>
+                    <a href="products.html?category=automotive">Automotive</a>
+                    <a href="products.html?category=groceries">Pet Supplies</a>
+                    <a href="products.html?category=sports-accessories">Sports</a>
+                </div>
+            </div>
+            <a href="best-sellers.html">Best Sellers</a>
+            <a href="trending.html">Trending Deals</a>
+            <a href="refund.html">Claim Refund</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a id="auth-nav-link" href="auth.html">Login</a>
+            <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="about-hero">
+            <div class="hero-content">
+                <h1>Redefining Delivery in NSW</h1>
+                <p>GoDash is built for the modern shopper who values time, transparency, and choice.</p>
+            </div>
+        </section>
+
+        <!-- MISSION SECTION -->
+        <section class="about-section">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>At GoDash, our mission is to eliminate the uncertainty of online shopping. We believe that you shouldn't have to wait all day for a package. By introducing smart delivery scheduling and live tracking, we put the power back in your hands.</p>
+                    <p>Whether you're in Sydney, Newcastle, or Wollongong, our goal is to provide the most reliable ecommerce experience in New South Wales.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1586769852044-692d6e3703f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Delivery Van">
+                </div>
+            </div>
+        </section>
+
+        <!-- GOALS SECTION -->
+        <section class="goals-section">
+            <div class="section-header">
+                <h2>Project Goals</h2>
+            </div>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-icon">🕒</div>
+                    <h3>Precision Scheduling</h3>
+                    <p>Provide specific 3-hour time slots so customers can plan their day around their delivery.</p>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">📊</div>
+                    <h3>Live Transparency</h3>
+                    <p>Real-time order tracking with visual progress indicators and countdown timers.</p>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">♿</div>
+                    <h3>Full Accessibility</h3>
+                    <p>Built with inclusive design principles to ensure every shopper can navigate with ease.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section class="about-section team-section">
+            <div class="section-header">
+                <h2>Meet the Team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-member-placeholder">JD</div>
+                    <h3>John Doe</h3>
+                    <p>Lead Developer</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-member-placeholder">JS</div>
+                    <h3>Jane Smith</h3>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-member-placeholder">ML</div>
+                    <h3>Mike Lee</h3>
+                    <p>Backend Engineer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="about-section contact-section">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We're here to help you 24/7.</p>
+            </div>
+            <div class="about-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Sydney St, NSW 2000, Australia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>support@godash.com.au</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+61 2 9000 0000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-box">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" required placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" rows="4" required placeholder="How can we help?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <div id="contact-response" class="hidden"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>GoDash</h3>
+                <p>Modern ecommerce platform with smart delivery features.</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="about.html#contact">Contact</a>
+                <a href="refund.html">Refund</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contact.js" defer></script>
+</body>
+
+</html>

@@ -178,19 +178,6 @@ body {
     padding: 50px 5%;
 }
 
-.best-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 20px;
-}
-
-.best-card {
-    background: white;
-    padding: 40px;
-    border-radius: 14px;
-    text-align: center;
-}
-
 /* TRENDING */
 
 .trending {
@@ -200,9 +187,14 @@ body {
 .deal-banner {
     background: #111827;
     color: white;
-    padding: 60px;
     border-radius: 14px;
-    text-align: center;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.deal-banner:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* NEWSLETTER */
@@ -255,24 +247,6 @@ body {
 .footer-links a {
     color: white;
     text-decoration: none;
-}
-
-/* DARK MODE */
-
-.dark-mode {
-    background: #111827;
-    color: white;
-}
-
-.dark-mode .header,
-.dark-mode .product-card,
-.dark-mode .best-card {
-    background: #1f2937;
-    color: white;
-}
-
-.dark-mode a {
-    color: white;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,94 @@
+/* GLOBAL DARK MODE */
+
+.dark-mode {
+    background: #111827;
+    color: white;
+}
+
+.dark-mode .header,
+.dark-mode .product-card,
+.dark-mode .best-card {
+    background: #1f2937;
+    color: white;
+}
+
+.dark-mode a {
+    color: white;
+}
+
+/* FORMS DARK MODE */
+
+.dark-mode .form-group label {
+    color: #e5e7eb;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select,
+.dark-mode .form-group textarea {
+    background: #374151;
+    color: white;
+    border-color: #4b5563;
+}
+
+.dark-mode .feedback-section p {
+    color: #9ca3af;
+}
+
+/* CART DARK MODE */
+
+.dark-mode .cart-items-list,
+.dark-mode .cart-summary {
+    background: #1f2937;
+    color: white;
+}
+
+.dark-mode .cart-item {
+    border-color: #374151;
+}
+
+.dark-mode .summary-item.total {
+    color: white;
+}
+
+.dark-mode .qty-btn {
+    background: #374151;
+    color: white;
+}
+
+/* DELIVERY DARK MODE */
+
+.dark-mode .delivery-card,
+.dark-mode .order-summary-box,
+.dark-mode .slot-btn {
+    background: #1f2937;
+    color: white;
+    border-color: #374151;
+}
+
+.dark-mode .type-name, 
+.dark-mode .delivery-card h3, 
+.dark-mode .total-row {
+    color: white;
+}
+
+.dark-mode .type-option:has(input:checked) {
+    background: #374151;
+}
+
+.dark-mode .selection-preview {
+    background: #374151;
+}
+
+/* PRODUCT DETAIL DARK MODE */
+
+.dark-mode .product-image-large {
+    background: #1f2937;
+}
+
+.dark-mode .product-info-detailed h2 {
+    color: white;
+}
+
+.dark-mode .product-description {
+    color: #d1d5db;
+}
