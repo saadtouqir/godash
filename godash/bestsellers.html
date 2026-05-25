@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Best Sellers | GoDash</title>
+
+  <!-- Main Global Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Page Styles -->
+  <link rel="stylesheet" href="css/bestsellers.css" />
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <nav class="navbar">
+
+    <div class="nav-logo">
+      <a href="index.html">GoDash</a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="bestsellers.html" class="active">Best Sellers</a></li>
+      <li><a href="trendingdeals.html">Trending Deals</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="auth.html">Login</a></li>
+      <li>
+        <a href="cart.html">
+          Cart (<span id="cart-count">0</span>)
+        </a>
+      </li>
+    </ul>
+
+    <button class="dark-mode-toggle" id="darkModeBtn">
+      Dark Mode
+    </button>
+
+  </nav>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+  <section class="bs-hero">
+
+    <div class="bs-hero-content">
+
+      <div class="bs-badge">
+        Top Rated Products
+      </div>
+
+      <h1>Best Sellers</h1>
+
+      <p>
+        Discover the most popular and highest-rated products
+        chosen by GoDash customers across Australia.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       STATS
+  ========================== -->
+  <section class="bs-stats-bar">
+
+    <div class="bs-stat">
+      <span class="bs-stat-num" id="total-products">0</span>
+      <span class="bs-stat-label">Products</span>
+    </div>
+
+    <div class="bs-stat">
+      <span class="bs-stat-num">4.5+</span>
+      <span class="bs-stat-label">Average Rating</span>
+    </div>
+
+    <div class="bs-stat">
+      <span class="bs-stat-num">10K+</span>
+      <span class="bs-stat-label">Customers</span>
+    </div>
+
+    <div class="bs-stat">
+      <span class="bs-stat-num">Free</span>
+      <span class="bs-stat-label">Returns</span>
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FILTERS
+  ========================== -->
+  <section class="bs-controls">
+
+    <div class="bs-filters">
+
+      <button class="filter-btn active" data-category="all">
+        All
+      </button>
+
+      <button class="filter-btn" data-category="beauty">
+        Beauty
+      </button>
+
+      <button class="filter-btn" data-category="fragrances">
+        Fragrances
+      </button>
+
+      <button class="filter-btn" data-category="furniture">
+        Furniture
+      </button>
+
+      <button class="filter-btn" data-category="groceries">
+        Groceries
+      </button>
+
+      <button class="filter-btn" data-category="electronics">
+        Electronics
+      </button>
+
+    </div>
+
+    <div class="bs-sort">
+
+      <label for="sort-select">Sort By:</label>
+
+      <select id="sort-select">
+        <option value="rating">Top Rated</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="discount">Biggest Discount</option>
+      </select>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       LOADING
+  ========================== -->
+  <div class="bs-loading" id="bs-loading">
+
+    <div class="bs-spinner"></div>
+
+    <p>Loading products...</p>
+
+  </div>
+
+  <!-- =========================
+       PRODUCT GRID
+  ========================== -->
+  <section class="bs-grid-section">
+
+    <div class="bs-grid" id="bs-grid"></div>
+
+  </section>
+
+  <!-- =========================
+       LOAD MORE
+  ========================== -->
+  <div class="bs-load-more-wrap">
+
+    <button class="bs-load-more" id="load-more-btn">
+      Load More
+    </button>
+
+  </div>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <h2 class="footer-logo">GoDash</h2>
+
+        <p>
+          Smart online shopping with fast delivery
+          scheduling across Australia.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <h4>Quick Links</h4>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="bestsellers.html">Best Sellers</a></li>
+          <li><a href="trending.html">Trending Deals</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer-links">
+
+        <h4>Support</h4>
+
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="cart.html">My Cart</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 GoDash. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/darkmode.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/bestsellers.js"></script>
+
+</body>
+</html>

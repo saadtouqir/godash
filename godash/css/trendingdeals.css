@@ -1,0 +1,456 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f7fb;
+  color:#111827;
+  line-height:1.6;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar{
+  width:100%;
+  background:#ffffff;
+  border-bottom:1px solid #e5e7eb;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 40px;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav-logo a{
+  text-decoration:none;
+  color:#2563eb;
+  font-size:1.6rem;
+  font-weight:700;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  list-style:none;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#374151;
+  font-size:0.95rem;
+  font-weight:500;
+  transition:0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+  color:#2563eb;
+}
+
+.dark-mode-toggle{
+  border:none;
+  background:#2563eb;
+  color:#ffffff;
+
+  padding:10px 18px;
+  border-radius:8px;
+
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.trending-hero{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:#ffffff;
+  text-align:center;
+
+  padding:90px 20px;
+}
+
+.trending-badge{
+  display:inline-block;
+
+  background:rgba(255,255,255,0.15);
+
+  padding:8px 18px;
+  border-radius:50px;
+
+  margin-bottom:20px;
+
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.trending-hero h1{
+  font-size:3rem;
+  margin-bottom:18px;
+}
+
+.trending-hero p{
+  max-width:650px;
+  margin:auto;
+
+  font-size:1rem;
+  opacity:0.9;
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.deal-stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  background:#ffffff;
+
+  border-bottom:1px solid #e5e7eb;
+}
+
+.deal-stat{
+  text-align:center;
+  padding:24px 15px;
+
+  border-right:1px solid #e5e7eb;
+}
+
+.deal-stat:last-child{
+  border-right:none;
+}
+
+.deal-stat-number{
+  display:block;
+
+  color:#2563eb;
+
+  font-size:1.7rem;
+  font-weight:700;
+}
+
+.deal-stat-label{
+  color:#6b7280;
+  font-size:0.85rem;
+}
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.trending-controls{
+  max-width:1300px;
+  margin:35px auto;
+
+  padding:0 20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.deal-filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.deal-btn{
+  padding:10px 18px;
+
+  border:1px solid #d1d5db;
+  border-radius:30px;
+
+  background:#ffffff;
+
+  cursor:pointer;
+
+  transition:0.2s ease;
+}
+
+.deal-btn:hover,
+.deal-btn.active{
+  background:#2563eb;
+  color:#ffffff;
+  border-color:#2563eb;
+}
+
+.deal-sort{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.deal-sort select{
+  padding:10px 14px;
+
+  border-radius:8px;
+  border:1px solid #d1d5db;
+}
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.trending-products{
+  max-width:1300px;
+  margin:auto;
+
+  padding:0 20px 70px;
+}
+
+.trending-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.deal-card{
+  background:#ffffff;
+
+  border-radius:16px;
+
+  overflow:hidden;
+
+  box-shadow:0 4px 14px rgba(0,0,0,0.08);
+
+  transition:0.3s ease;
+}
+
+.deal-card:hover{
+  transform:translateY(-6px);
+}
+
+.deal-image{
+  position:relative;
+
+  height:240px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:#f9fafb;
+}
+
+.deal-image img{
+  max-width:85%;
+  max-height:190px;
+  object-fit:contain;
+}
+
+.deal-tag{
+  position:absolute;
+
+  top:14px;
+  left:14px;
+
+  background:#dc2626;
+  color:#ffffff;
+
+  padding:6px 10px;
+
+  border-radius:6px;
+
+  font-size:0.8rem;
+  font-weight:600;
+}
+
+.deal-content{
+  padding:20px;
+}
+
+.deal-category{
+  color:#2563eb;
+
+  font-size:0.8rem;
+  font-weight:700;
+
+  text-transform:uppercase;
+}
+
+.deal-content h3{
+  margin:12px 0;
+
+  font-size:1.1rem;
+}
+
+.deal-rating{
+  color:#f59e0b;
+
+  margin-bottom:14px;
+
+  font-size:0.9rem;
+}
+
+.deal-price{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  margin-bottom:18px;
+}
+
+.new-price{
+  font-size:1.3rem;
+  font-weight:700;
+}
+
+.old-price{
+  color:#9ca3af;
+  text-decoration:line-through;
+}
+
+.deal-cart-btn{
+  width:100%;
+
+  border:none;
+
+  background:#2563eb;
+  color:#ffffff;
+
+  padding:12px;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:0.2s ease;
+}
+
+.deal-cart-btn:hover{
+  background:#1d4ed8;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer{
+  background:#111827;
+  color:#d1d5db;
+
+  padding-top:50px;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+
+  gap:40px;
+
+  padding:0 20px 40px;
+}
+
+.footer-logo{
+  color:#ffffff;
+  margin-bottom:14px;
+}
+
+.footer-links h4{
+  color:#ffffff;
+  margin-bottom:16px;
+}
+
+.footer-links ul{
+  list-style:none;
+}
+
+.footer-links li{
+  margin-bottom:10px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:#9ca3af;
+}
+
+.footer-links a:hover{
+  color:#ffffff;
+}
+
+.footer-bottom{
+  border-top:1px solid #374151;
+
+  text-align:center;
+
+  padding:20px;
+
+  color:#9ca3af;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+  .navbar{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .trending-controls{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .deal-stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .trending-hero h1{
+    font-size:2.2rem;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .deal-stats{
+    grid-template-columns:1fr;
+  }
+
+  .nav-links{
+    gap:14px;
+  }
+
+}
