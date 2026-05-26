@@ -1,3 +1,7 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
 *{
   margin:0;
   padding:0;
@@ -5,172 +9,223 @@
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   background:#f5f7fb;
   color:#111827;
+  line-height:1.6;
 }
 
-/* =========================
+/* =========================================
    NAVBAR
-========================= */
+========================================= */
 
-.trendingdeals-navbar{
+.navbar{
+  width:100%;
+  background:#ffffff;
+  border-bottom:1px solid #e5e7eb;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
 
   padding:18px 40px;
 
-  background:#ffffff;
-
-  border-bottom:1px solid #e5e7eb;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.trendingdeals-logo a{
+.nav-logo a{
   text-decoration:none;
   color:#2563eb;
-
   font-size:1.6rem;
   font-weight:700;
 }
 
-.trendingdeals-nav-links{
+.nav-links{
   display:flex;
+  align-items:center;
   gap:24px;
-
   list-style:none;
 }
 
-.trendingdeals-nav-links a{
+.nav-links a{
   text-decoration:none;
   color:#374151;
+  font-size:0.95rem;
+  font-weight:500;
+  transition:0.2s ease;
 }
 
-.trendingdeals-active-link{
-  color:#2563eb !important;
+.nav-links a:hover,
+.nav-links a.active{
+  color:#2563eb;
 }
 
-.trendingdeals-darkmode-btn{
+.dark-mode-toggle{
   border:none;
-
   background:#2563eb;
   color:#ffffff;
 
   padding:10px 18px;
-
   border-radius:8px;
 
   cursor:pointer;
+  font-weight:600;
 }
 
-/* =========================
+/* =========================================
    HERO
-========================= */
+========================================= */
 
-.trendingdeals-hero{
-  background:linear-gradient(
-    135deg,
-    #2563eb,
-    #1d4ed8
-  );
-
+.trending-hero{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
   color:#ffffff;
-
   text-align:center;
 
   padding:90px 20px;
 }
 
-.trendingdeals-badge{
+.trending-badge{
   display:inline-block;
 
   background:rgba(255,255,255,0.15);
 
   padding:8px 18px;
-
   border-radius:50px;
 
   margin-bottom:20px;
+
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
 }
 
-.trendingdeals-hero h1{
+.trending-hero h1{
   font-size:3rem;
-  margin-bottom:16px;
+  margin-bottom:18px;
 }
 
-/* =========================
-   FILTERS
-========================= */
+.trending-hero p{
+  max-width:650px;
+  margin:auto;
 
-.trendingdeals-controls{
+  font-size:1rem;
+  opacity:0.9;
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.deal-stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  background:#ffffff;
+
+  border-bottom:1px solid #e5e7eb;
+}
+
+.deal-stat{
+  text-align:center;
+  padding:24px 15px;
+
+  border-right:1px solid #e5e7eb;
+}
+
+.deal-stat:last-child{
+  border-right:none;
+}
+
+.deal-stat-number{
+  display:block;
+
+  color:#2563eb;
+
+  font-size:1.7rem;
+  font-weight:700;
+}
+
+.deal-stat-label{
+  color:#6b7280;
+  font-size:0.85rem;
+}
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.trending-controls{
   max-width:1300px;
-
-  margin:40px auto;
+  margin:35px auto;
 
   padding:0 20px;
 
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   gap:20px;
 }
 
-.trendingdeals-filters{
+.deal-filters{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
 }
 
-.trendingdeals-btn{
+.deal-btn{
   padding:10px 18px;
 
-  border-radius:30px;
-
   border:1px solid #d1d5db;
+  border-radius:30px;
 
   background:#ffffff;
 
   cursor:pointer;
+
+  transition:0.2s ease;
 }
 
-.trendingdeals-active{
+.deal-btn:hover,
+.deal-btn.active{
   background:#2563eb;
   color:#ffffff;
+  border-color:#2563eb;
 }
 
-.trendingdeals-sort{
+.deal-sort{
   display:flex;
   align-items:center;
   gap:10px;
 }
 
-.trendingdeals-sort select{
-  padding:10px;
+.deal-sort select{
+  padding:10px 14px;
+
   border-radius:8px;
+  border:1px solid #d1d5db;
 }
 
-/* =========================
-   PRODUCTS
-========================= */
+/* =========================================
+   PRODUCT GRID
+========================================= */
 
-.trendingdeals-products{
+.trending-products{
   max-width:1300px;
   margin:auto;
 
-  padding:0 20px 80px;
+  padding:0 20px 70px;
 }
 
-.trendingdeals-grid{
+.trending-grid{
   display:grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(260px,1fr));
-
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:25px;
 }
 
-.trendingdeals-card{
+.deal-card{
   background:#ffffff;
 
   border-radius:16px;
@@ -179,14 +234,14 @@ body{
 
   box-shadow:0 4px 14px rgba(0,0,0,0.08);
 
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
-.trendingdeals-card:hover{
+.deal-card:hover{
   transform:translateY(-6px);
 }
 
-.trendingdeals-image{
+.deal-image{
   position:relative;
 
   height:240px;
@@ -198,16 +253,13 @@ body{
   background:#f9fafb;
 }
 
-.trendingdeals-image img{
-  width:100%;
-  height:100%;
-
+.deal-image img{
+  max-width:85%;
+  max-height:190px;
   object-fit:contain;
-
-  padding:20px;
 }
 
-.trendingdeals-tag{
+.deal-tag{
   position:absolute;
 
   top:14px;
@@ -221,48 +273,55 @@ body{
   border-radius:6px;
 
   font-size:0.8rem;
+  font-weight:600;
 }
 
-.trendingdeals-content{
+.deal-content{
   padding:20px;
 }
 
-.trendingdeals-category{
+.deal-category{
   color:#2563eb;
 
   font-size:0.8rem;
   font-weight:700;
+
+  text-transform:uppercase;
 }
 
-.trendingdeals-content h3{
+.deal-content h3{
   margin:12px 0;
+
+  font-size:1.1rem;
 }
 
-.trendingdeals-rating{
+.deal-rating{
   color:#f59e0b;
 
   margin-bottom:14px;
+
+  font-size:0.9rem;
 }
 
-.trendingdeals-price{
+.deal-price{
   display:flex;
+  align-items:center;
   gap:10px;
 
   margin-bottom:18px;
 }
 
-.trendingdeals-new-price{
+.new-price{
   font-size:1.3rem;
   font-weight:700;
 }
 
-.trendingdeals-old-price{
+.old-price{
   color:#9ca3af;
-
   text-decoration:line-through;
 }
 
-.trendingdeals-cart-btn{
+.deal-cart-btn{
   width:100%;
 
   border:none;
@@ -275,89 +334,98 @@ body{
   border-radius:8px;
 
   cursor:pointer;
+
+  font-weight:600;
+
+  transition:0.2s ease;
 }
 
-.trendingdeals-cart-btn:hover{
+.deal-cart-btn:hover{
   background:#1d4ed8;
 }
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
-.trendingdeals-footer{
+.site-footer{
   background:#111827;
   color:#d1d5db;
 
   padding-top:50px;
 }
 
-.trendingdeals-footer-content{
+.footer-inner{
   max-width:1200px;
-
   margin:auto;
 
   display:grid;
-
-  grid-template-columns:2fr 1fr;
+  grid-template-columns:2fr 1fr 1fr;
 
   gap:40px;
 
   padding:0 20px 40px;
 }
 
-.trendingdeals-footer a{
-  color:#9ca3af;
-  text-decoration:none;
+.footer-logo{
+  color:#ffffff;
+  margin-bottom:14px;
 }
 
-.trendingdeals-footer ul{
+.footer-links h4{
+  color:#ffffff;
+  margin-bottom:16px;
+}
+
+.footer-links ul{
   list-style:none;
 }
 
-.trendingdeals-footer li{
+.footer-links li{
   margin-bottom:10px;
 }
 
-.trendingdeals-footer-bottom{
+.footer-links a{
+  text-decoration:none;
+  color:#9ca3af;
+}
+
+.footer-links a:hover{
+  color:#ffffff;
+}
+
+.footer-bottom{
   border-top:1px solid #374151;
 
   text-align:center;
 
   padding:20px;
+
+  color:#9ca3af;
 }
 
-/* =========================
-   DARK MODE
-========================= */
-
-.trendingdeals-darkmode{
-  background:#111827;
-  color:#ffffff;
-}
-
-/* =========================
+/* =========================================
    RESPONSIVE
-========================= */
+========================================= */
 
 @media(max-width:992px){
 
-  .trendingdeals-navbar{
+  .navbar{
     flex-direction:column;
     gap:20px;
   }
 
-  .trendingdeals-nav-links{
+  .nav-links{
     flex-wrap:wrap;
     justify-content:center;
   }
 
-  .trendingdeals-controls{
+  .trending-controls{
     flex-direction:column;
     align-items:flex-start;
   }
 
-  .trendingdeals-footer-content{
+  .footer-inner{
     grid-template-columns:1fr;
   }
 
@@ -365,8 +433,24 @@ body{
 
 @media(max-width:768px){
 
-  .trendingdeals-hero h1{
+  .deal-stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .trending-hero h1{
     font-size:2.2rem;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .deal-stats{
+    grid-template-columns:1fr;
+  }
+
+  .nav-links{
+    gap:14px;
   }
 
 }
