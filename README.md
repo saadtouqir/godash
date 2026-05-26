@@ -62,7 +62,7 @@ cd godash
 3. Setup environment variables:
    *   Copy the template file: `cp .env.example .env`
    *   Open the new `.env` file and fill in your **MONGO_URI** and **JWT_SECRET**.
-    *   *(Note: Ask your teammate for the shared credentials to ensure you use the same database.)*
+   *   *(Note: Ask your teammate for the shared credentials to ensure you use the same database.)*
 
 4. Start the server:
    ```bash
