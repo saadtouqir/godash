@@ -1,366 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trending Deals | GoDash</title>
 
-  <title>Trending Deals | GoDash</title>
+    <meta name="description" content="Discover trending deals with huge discounts and fast delivery.">
+    <meta name="keywords" content="GoDash, trending deals, discounts, offers, ecommerce">
 
-  <!-- Global Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/trendingdeals.css">
 
-  <!-- Page Styles -->
-  <link rel="stylesheet" href="css/trendingdeals.css" />
-
+    <!-- Global Scripts -->
+    <script src="js/app.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+    <script src="js/trendingdeals.js" defer></script>
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
-  <nav class="navbar">
+    <!-- =========================
+         HEADER (MATCHES YOUR SITE)
+    ========================== -->
 
-    <div class="nav-logo">
-      <a href="index.html">GoDash</a>
-    </div>
+    <header class="header">
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="bestsellers.html">Best Sellers</a></li>
-      <li><a href="trending.html" class="active">Trending Deals</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="auth.html">Login</a></li>
-      <li>
-        <a href="cart.html">
-          Cart (<span id="cart-count">0</span>)
-        </a>
-      </li>
-    </ul>
+        <div class="logo">
+            <a href="index.html"><h1>GoDash</h1></a>
+        </div>
 
-    <button class="dark-mode-toggle" id="darkModeBtn">
-      Dark Mode
-    </button>
+        <nav class="navbar">
 
-  </nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="bestsellers.html">Best Sellers</a>
+            <a href="trendingdeals.html" class="active">Trending Deals</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
 
-  <!-- =========================
-       HERO SECTION
-  ========================== -->
-  <section class="trending-hero">
+            <a id="auth-nav-link" href="auth.html">Login</a>
 
-    <div class="trending-hero-content">
+            <a href="cart.html" class="cart-link">
+                Cart (<span id="cart-count">0</span>)
+            </a>
 
-      <div class="trending-badge">
-        Limited Time Offers
-      </div>
+        </nav>
 
-      <h1>Trending Deals</h1>
+        <button id="dark-mode-toggle">Dark Mode</button>
 
-      <p>
-        Save more with the latest trending discounts and
-        top-rated offers available on GoDash.
-      </p>
+    </header>
 
-    </div>
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
 
-  </section>
+    <section class="trendingdeals-hero">
 
-  <!-- =========================
-       DEAL STATS
-  ========================== -->
-  <section class="deal-stats">
+        <div class="trendingdeals-hero-content">
 
-    <div class="deal-stat">
-      <span class="deal-stat-number">50%</span>
-      <span class="deal-stat-label">Max Discount</span>
-    </div>
+            <span class="trendingdeals-badge">Limited Time Offers</span>
 
-    <div class="deal-stat">
-      <span class="deal-stat-number">200+</span>
-      <span class="deal-stat-label">Deals Available</span>
-    </div>
+            <h1>Trending Deals</h1>
 
-    <div class="deal-stat">
-      <span class="deal-stat-number">24/7</span>
-      <span class="deal-stat-label">Updated Offers</span>
-    </div>
-
-    <div class="deal-stat">
-      <span class="deal-stat-number">Fast</span>
-      <span class="deal-stat-label">Delivery</span>
-    </div>
-
-  </section>
-
-  <!-- =========================
-       FILTER SECTION
-  ========================== -->
-  <section class="trending-controls">
-
-    <div class="deal-filters">
-
-      <button class="deal-btn active">
-        All Deals
-      </button>
-
-      <button class="deal-btn">
-        Electronics
-      </button>
-
-      <button class="deal-btn">
-        Fashion
-      </button>
-
-      <button class="deal-btn">
-        Home
-      </button>
-
-      <button class="deal-btn">
-        Beauty
-      </button>
-
-    </div>
-
-    <div class="deal-sort">
-
-      <label for="deal-sort-select">
-        Sort By:
-      </label>
-
-      <select id="deal-sort-select">
-
-        <option>Top Deals</option>
-        <option>Highest Discount</option>
-        <option>Price Low to High</option>
-        <option>Price High to Low</option>
-
-      </select>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-       PRODUCTS GRID
-  ========================== -->
-  <section class="trending-products">
-
-    <div class="trending-grid">
-
-      <!-- CARD 1 -->
-      <div class="deal-card">
-
-        <div class="deal-image">
-
-          <span class="deal-tag">
-            30% OFF
-          </span>
-
-          <img
-            src="https://dummyjson.com/image/i/products/1/thumbnail.jpg"
-            alt="Trending Product"
-          />
+            <p>Discover trending products with amazing discounts and fast delivery.</p>
 
         </div>
 
-        <div class="deal-content">
+    </section>
 
-          <span class="deal-category">
-            Electronics
-          </span>
+    <!-- =========================
+         FILTERS + SORT
+    ========================== -->
 
-          <h3>
-            Premium Wireless Headphones
-          </h3>
+    <section class="trendingdeals-controls">
 
-          <div class="deal-rating">
-            4.8 Rating
-          </div>
+        <div class="trendingdeals-filters">
 
-          <div class="deal-price">
-
-            <span class="new-price">
-              $120
-            </span>
-
-            <span class="old-price">
-              $170
-            </span>
-
-          </div>
-
-          <button class="deal-cart-btn">
-            Add To Cart
-          </button>
+            <button class="trendingdeals-btn trendingdeals-active" data-category="all">All Deals</button>
+            <button class="trendingdeals-btn" data-category="beauty">Beauty</button>
+            <button class="trendingdeals-btn" data-category="fragrances">Fragrances</button>
+            <button class="trendingdeals-btn" data-category="furniture">Furniture</button>
+            <button class="trendingdeals-btn" data-category="groceries">Groceries</button>
 
         </div>
 
-      </div>
+        <div class="trendingdeals-sort">
 
-      <!-- CARD 2 -->
-      <div class="deal-card">
+            <label for="trendingdeals-sort-select">Sort By:</label>
 
-        <div class="deal-image">
-
-          <span class="deal-tag">
-            20% OFF
-          </span>
-
-          <img
-            src="https://dummyjson.com/image/i/products/2/thumbnail.jpg"
-            alt="Trending Product"
-          />
+            <select id="trendingdeals-sort-select">
+                <option value="default">Top Deals</option>
+                <option value="discount">Highest Discount</option>
+                <option value="price-low">Price Low To High</option>
+                <option value="price-high">Price High To Low</option>
+            </select>
 
         </div>
 
-        <div class="deal-content">
+    </section>
 
-          <span class="deal-category">
-            Fashion
-          </span>
+    <!-- =========================
+         PRODUCTS GRID
+    ========================== -->
 
-          <h3>
-            Smart Casual Sneakers
-          </h3>
+    <section class="trendingdeals-products">
 
-          <div class="deal-rating">
-            4.6 Rating
-          </div>
+        <div id="trendingdeals-products-container" class="trendingdeals-grid">
+            <!-- Products Loaded Dynamically -->
+        </div>
 
-          <div class="deal-price">
+    </section>
 
-            <span class="new-price">
-              $80
-            </span>
+    <!-- =========================
+         FOOTER (MATCHES YOUR SITE)
+    ========================== -->
 
-            <span class="old-price">
-              $110
-            </span>
+    <footer class="footer">
 
-          </div>
+        <div class="footer-content">
 
-          <button class="deal-cart-btn">
-            Add To Cart
-          </button>
+            <div>
+                <h3>GoDash</h3>
+                <p>Smart shopping with fast delivery and trending products.</p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="bestsellers.html">Best Sellers</a></li>
+                    <li><a href="trendingdeals.html">Trending Deals</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cart.html">My Cart</a></li>
+                </ul>
+            </div>
 
         </div>
 
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="deal-card">
-
-        <div class="deal-image">
-
-          <span class="deal-tag">
-            40% OFF
-          </span>
-
-          <img
-            src="https://dummyjson.com/image/i/products/3/thumbnail.jpg"
-            alt="Trending Product"
-          />
-
+        <div class="footer-bottom">
+            © 2026 GoDash. All Rights Reserved.
         </div>
 
-        <div class="deal-content">
+    </footer>
 
-          <span class="deal-category">
-            Beauty
-          </span>
+</body>
 
-          <h3>
-            Luxury Skincare Set
-          </h3>
+</html>
 
-          <div class="deal-rating">
-            4.9 Rating
-          </div>
-
-          <div class="deal-price">
-
-            <span class="new-price">
-              $60
-            </span>
-
-            <span class="old-price">
-              $100
-            </span>
-
-          </div>
-
-          <button class="deal-cart-btn">
-            Add To Cart
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer class="site-footer">
-
-    <div class="footer-inner">
-
-      <div class="footer-brand">
-
-        <h2 class="footer-logo">
-          GoDash
-        </h2>
-
-        <p>
-          Fast and reliable shopping with
-          smart delivery scheduling across Australia.
-        </p>
-
-      </div>
-
-      <div class="footer-links">
-
-        <h4>Quick Links</h4>
-
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="bestsellers.html">Best Sellers</a></li>
-          <li><a href="trending.html">Trending Deals</a></li>
-        </ul>
-
-      </div>
-
-      <div class="footer-links">
-
-        <h4>Support</h4>
-
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="cart.html">My Cart</a></li>
-        </ul>
-
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-      <p>
-        © 2026 GoDash. All Rights Reserved.
-      </p>
-
-    </div>
-
-  </footer>
 
   <!-- Scripts -->
   <script src="js/darkmode.js"></script>
