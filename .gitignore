@@ -4,7 +4,6 @@ node_modules/
 .Rhistory
 *.docx
 *.pdf
-*.md
 Planning/
 # Project specific ignores
 godash/node_modules/

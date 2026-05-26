@@ -59,12 +59,11 @@ cd godash
    ```bash
    npm install
    ```
-3. Create a `.env` file and add your MongoDB URI:
-   ```plaintext
-   MONGO_URI=your_mongodb_atlas_connection_string
-   PORT=5001
-   JWT_SECRET=your_random_secret_key
-   ```
+3. Setup environment variables:
+   *   Copy the template file: `cp .env.example .env`
+   *   Open the new `.env` file and fill in your **MONGO_URI** and **JWT_SECRET**.
+    *   *(Note: Ask your teammate for the shared credentials to ensure you use the same database.)*
+
 4. Start the server:
    ```bash
    npm start
