@@ -2,93 +2,129 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GoDash | Modern Ecommerce Store</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-        content="GoDash modern ecommerce platform with smart delivery scheduling and live order tracking.">
+    <title>
+        GoDash | Modern Ecommerce Store
+    </title>
 
-    <meta name="keywords"
-        content="GoDash, ecommerce, electronics, clothing, watches, perfumes, automotive">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 
-    <meta name="author" content="GoDash Team">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/darkmode.css">
-    <script src="js/app.js" defer></script>
-    <script src="js/api.js" defer></script>
-    <script src="js/darkmode.js" defer></script>
+    <script
+        src="js/darkmode.js"
+        defer
+    ></script>
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================== -->
 
     <header class="header">
 
         <div class="logo">
-            <a href="index.html" style="text-decoration: none;"><h1>GoDash</h1></a>
+
+            <a href="index.html">
+
+                <h1>
+                    GoDash
+                </h1>
+
+            </a>
+
         </div>
 
         <nav class="navbar">
 
-            <a href="index.html">Home</a>
+            <a href="index.html" class="nav-link active">
+                Home
+            </a>
 
-            <div class="dropdown">
+            <a href="products.html" class="nav-link">
+                Products
+            </a>
 
-                <button class="dropbtn">
-                    Products
-                </button>
+            <a href="bestsellers.html" class="nav-link">
+                Best Sellers
+            </a>
 
-                <div class="dropdown-content">
+            <a href="trendingdeals.html" class="nav-link">
+                Trending Deals
+            </a>
 
-                    <a href="products.html?category=smartphones">Electronics</a>
-                    <a href="products.html?category=mens-shirts">Clothing</a>
-                    <a href="products.html?category=womens-watches">Watches</a>
-                    <a href="products.html?category=fragrances">Perfumes</a>
-                    <a href="products.html?category=automotive">Automotive</a>
-                    <a href="products.html?category=groceries">Pet Supplies</a>
-                    <a href="products.html?category=sports-accessories">Sports</a>
+            <a href="about.html" class="nav-link">
+                About Us
+            </a>
 
-                </div>
+            <a href="contact.html" class="nav-link">
+                Contact Us
+            </a>
 
-            </div>
+            <a href="auth.html" class="nav-btn-outline">
+                Login
+            </a>
 
-            <a href="bestsellers.html">Best Sellers</a>
-            <a href="trendingdeals.html">Trending Deals</a>
-            <a href="about.html">About Us</a>
-            <a href="about.html#contact">Contact Us</a>
-            <a id="auth-nav-link" href="auth.html">Login</a>
-
-            <a href="cart.html" class="cart-link">
+            <a
+                href="cart.html"
+                class="nav-btn-solid"
+            >
                 Cart (<span id="cart-count">0</span>)
             </a>
 
         </nav>
 
-        <button id="dark-mode-toggle">
-            Dark Mode
-        </button>
+        <!-- =========================
+             DARK MODE SWITCH
+        ========================== -->
+
+        <label class="theme-switch">
+
+            <input
+                type="checkbox"
+                id="dark-mode-toggle"
+            >
+
+            <span class="slider"></span>
+
+        </label>
 
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
 
         <div class="hero-content">
 
-            <h2>Fast Shopping with Smart Delivery Scheduling</h2>
+            <h2>
+                Fast Shopping with Smart Delivery
+            </h2>
 
             <p>
-                Shop trending products and select your preferred delivery time instantly.
+
+                Shop trending products with
+                smart delivery scheduling.
+
             </p>
 
-            <a href="products.html" class="shop-btn">
+            <a
+                href="products.html"
+                class="shop-btn"
+            >
                 Shop Now
             </a>
 
@@ -96,127 +132,358 @@
 
     </section>
 
-    <!-- SEARCH BAR -->
-
-    <section class="search-section">
-
-        <input
-            type="text"
-            id="search-input"
-            placeholder="Search products..."
-            aria-label="Search Products">
-
-    </section>
-
-    <!-- FEATURED PRODUCTS -->
+    <!-- =========================
+         FEATURED PRODUCTS
+    ========================== -->
 
     <section class="products-section">
 
         <div class="section-header">
 
-            <h2>Featured Products</h2>
+            <h2>
+                Featured Products
+            </h2>
 
         </div>
 
-        <div id="products-container" class="products-grid">
+        <div class="products-grid">
 
-            <!-- Products Loaded Dynamically -->
+            <!-- PRODUCT CARD -->
+
+            <div class="product-card">
+
+                <img
+                    src="https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
+                    alt="Mascara"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Essence Mascara Lash Princess
+                    </h3>
+
+                    <p>
+                        $9.99
+                    </p>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT CARD -->
+
+            <div class="product-card">
+
+                <img
+                    src="https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp"
+                    alt="Eyeshadow"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Eyeshadow Palette with Mirror
+                    </h3>
+
+                    <p>
+                        $19.99
+                    </p>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT CARD -->
+
+            <div class="product-card">
+
+                <img
+                    src="https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp"
+                    alt="Powder"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Powder Canister
+                    </h3>
+
+                    <p>
+                        $14.99
+                    </p>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT CARD -->
+
+            <div class="product-card">
+
+                <img
+                    src="https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp"
+                    alt="Lipstick"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Red Lipstick
+                    </h3>
+
+                    <p>
+                        $12.99
+                    </p>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
-    <!-- BEST SELLERS -->
-
-    <section class="best-sellers">
-
-        <div class="section-header">
-            <h2>Best Sellers</h2>
-        </div>
-
-        <div id="best-sellers-container" class="products-grid">
-            <!-- Best Sellers Loaded Dynamically -->
-        </div>
-
-    </section>
-
-    <!-- TRENDING DEAL -->
+    <!-- =========================
+         SPECIAL DEAL
+    ========================== -->
 
     <section class="trending">
 
         <div class="section-header">
-            <h2>Special Deal</h2>
+
+            <h2>
+                Special Deal
+            </h2>
+
         </div>
 
-        <div id="trending-container">
-            <!-- Trending Deal Loaded Dynamically -->
-            <div class="deal-banner">
-                <h3>Check our latest offers!</h3>
+        <div
+            class="deal-banner"
+            style="
+            background-image:
+            url('https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp');
+            "
+        >
+
+            <div class="deal-content">
+
+                <span class="deal-tag">
+                    HOT DEAL
+                </span>
+
+                <h3>
+                    Save 19% on Bedside Table African Cherry
+                </h3>
+
+                <p>
+                    Limited time offer for our NSW customers.
+                </p>
+
+                <button>
+                    Grab it Now
+                </button>
+
             </div>
+
         </div>
 
     </section>
 
-    <!-- RECENTLY VIEWED -->
+    <!-- =========================
+         RECENTLY VIEWED
+    ========================== -->
 
-    <section id="recently-viewed-section" class="products-section" style="display: none;">
+    <section class="products-section">
 
         <div class="section-header">
-            <h2>Recently Viewed</h2>
+
+            <h2>
+                Recently Viewed
+            </h2>
+
         </div>
 
-        <div id="recently-viewed-container" class="products-grid">
-            <!-- Recently Viewed Products Loaded Dynamically -->
+        <div class="products-grid">
+
+            <div class="product-card">
+
+                <img
+                    src="https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp"
+                    alt="Bedside Table"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Bedside Table African Cherry
+                    </h3>
+
+                    <p>
+                        $299.99
+                    </p>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="product-card">
+
+                <img
+                    src="https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp"
+                    alt="Eyeshadow"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Eyeshadow Palette with Mirror
+                    </h3>
+
+                    <p>
+                        $19.99
+                    </p>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
         </div>
 
     </section>
 
-    <!-- NEWSLETTER -->
-
-    <section class="newsletter">
-
-        <h2>Subscribe for Updates</h2>
-
-        <form id="newsletter-form">
-
-            <input
-                type="email"
-                id="newsletter-email"
-                placeholder="Enter your email"
-                required>
-
-            <button type="submit">
-                Subscribe
-            </button>
-
-        </form>
-        <div id="newsletter-message" style="margin-top: 15px; font-weight: bold;"></div>
-
-    </section>
-
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer class="footer">
 
-        <div class="footer-content">
+        <div class="footer-top">
 
-            <div>
+            <!-- BRAND -->
 
-                <h3>GoDash</h3>
+            <div class="footer-brand">
+
+                <h2>GoDash</h2>
 
                 <p>
-                    Modern ecommerce platform with smart delivery features.
+                    Your go-to destination for trending products
+                    delivered fast and smart, right to your door.
+                </p>
+
+                <p class="footer-contact-item">
+                    support@godash.com
+                </p>
+
+                <p class="footer-contact-item">
+                    +61 2 9000 0000
+                </p>
+
+                <p class="footer-contact-item">
+                    Sydney, NSW, Australia
                 </p>
 
             </div>
 
-            <div class="footer-links">
+            <!-- SHOP -->
 
-                <a href="about.html">About</a>
-                <a href="about.html#contact">Contact</a>
-                <a href="refund.html">Refund</a>
-                <a href="feedback.html">Feedback</a>
-                <a href="faq.html">FAQ</a>
+            <div class="footer-col">
+
+                <h4>Shop</h4>
+
+                <ul>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="bestsellers.html">Best Sellers</a></li>
+                    <li><a href="trendingdeals.html">Trending Deals</a></li>
+                    <li><a href="cart.html">My Cart</a></li>
+                </ul>
+
+            </div>
+
+            <!-- COMPANY -->
+
+            <div class="footer-col">
+
+                <h4>Company</h4>
+
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                </ul>
+
+            </div>
+
+            <!-- SUPPORT -->
+
+            <div class="footer-col">
+
+                <h4>Support</h4>
+
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shipping.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns &amp; Refunds</a></li>
+                    <li><a href="track.html">Track My Order</a></li>
+                </ul>
+
+            </div>
+
+            <!-- LEGAL -->
+
+            <div class="footer-col">
+
+                <h4>Legal</h4>
+
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 GoDash. All rights reserved.
+            </p>
+
+            <div class="footer-payments">
+
+                <span>We Accept:</span>
+
+                <span class="payment-badge">Visa</span>
+                <span class="payment-badge">Mastercard</span>
+                <span class="payment-badge">PayPal</span>
+                <span class="payment-badge">Apple Pay</span>
 
             </div>
 
@@ -225,5 +492,4 @@
     </footer>
 
 </body>
-
-</html>
+</html> 
