@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details | GoDash</title>
+    <title>All Products | GoDash</title>
+    <meta name="description" content="Browse our full catalog of electronics, clothing, watches, and more.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/darkmode.css">
-    <link rel="stylesheet" href="css/product.css">
     <script src="js/app.js" defer></script>
-    <script src="js/product-detail.js" defer></script>
+    <script src="js/api.js" defer></script>
     <script src="js/darkmode.js" defer></script>
 </head>
 
@@ -38,7 +38,6 @@
             <a href="bestsellers.html">Best Sellers</a>
             <a href="trendingdeals.html">Trending Deals</a>
             <a href="about.html">About Us</a>
-            <a href="about.html#contact">Contact Us</a>
             <a href="cart.html" class="cart-link">
                 Cart (<span id="cart-count">0</span>)
             </a>
@@ -47,10 +46,24 @@
     </header>
 
     <main>
-        <div id="product-detail" class="product-detail-container">
-            <!-- Loading state -->
-            <p>Loading product details...</p>
-        </div>
+        <!-- SEARCH & FILTER SECTION -->
+        <section class="search-section">
+            <div class="section-header">
+                <h2 id="category-title">All Products</h2>
+            </div>
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search in this category..."
+                aria-label="Search Products">
+        </section>
+
+        <!-- PRODUCTS GRID -->
+        <section class="products-section">
+            <div id="products-container" class="products-grid">
+                <p>Loading products...</p>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER -->
@@ -63,8 +76,6 @@
             <div class="footer-links">
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <a href="refund.html">Refund</a>
-                <a href="feedback.html">Feedback</a>
                 <a href="faq.html">FAQ</a>
             </div>
         </div>
