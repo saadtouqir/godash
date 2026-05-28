@@ -213,60 +213,6 @@ body {
 }
 
 /* =========================================
-   FOOTER (MATCHES YOUR SITE)
-========================================= */
-
-.footer {
-    background: var(--dark-bg);
-    color: #fff;
-    padding: 50px 40px;
-    margin-top: 40px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.footer h3,
-.footer h4 {
-    margin-bottom: 12px;
-    font-weight: 600;
-}
-
-.footer p {
-    max-width: 300px;
-    line-height: 1.6;
-}
-
-.footer ul {
-    list-style: none;
-}
-
-.footer ul li {
-    margin-bottom: 8px;
-}
-
-.footer ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer ul li a:hover {
-    color: var(--primary);
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-/* =========================================
    RESPONSIVE
 ========================================= */
 
