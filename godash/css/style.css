@@ -316,7 +316,7 @@ input:checked + .slider:before{
     background-repeat:no-repeat;
     background-position:right center;
 
-    background-color:#111827;
+    background-color:#f7f7f7;
 }
 
 .deal-banner::before{
